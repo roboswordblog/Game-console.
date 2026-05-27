@@ -15,16 +15,50 @@ class ControlManagement:
     self.pushController2 = None
     self.mode = 1
 
-class Button:
-  pass
+  def getMotor1(self):
+    return self.motorcontrollerA.get_position()
 
+  def getMotor2(self):
+    return self.motorcontrollerA.get_position()
+  
+  def getPush1(self):
+    if self.pushcontroller1 > 50:
+      return True
+    return False
+    
+  def getPush2(self):
+    if self.pushcontroller2 > 50:
+      return True
+    return False
+    
+class Button:
+  def __init__(self, x, y, width, height, text, bgColor, textColor, function=None, hoverColor=None):
+    self.x = x
+    self.y = y
+    self.width = width
+    self.height = height
+    self.bgColor = bgColor
+    self.textColor = textColor
+    self.hoverColor = hoverColor
+    self.function = function
+  
+  def draw(self):
+    # complete this later
+    pygame.draw.rect()
+    # add the text here
+
+  def update(self):
+    mousex, mousey = pygame.mouse.get_pos()
+    if self.x > mousex > self.x + self.width and self.y > mousey > self.y+height:
+      pass
+      # add hover and call function
 
 class WindowManage:
   def __init__(self):
     self.function = None
 
   def gameChoose(self):
-  pass
+    pass
   
   def pong(self):
     pass
