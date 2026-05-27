@@ -11,6 +11,9 @@ class ControlManagement:
   def __init__(self):
     self.motorcontrollerA = Motor("A")
     self.motorcontrollerB = Motor("B")
+    self.pushController1 = None
+    self.pushController2 = None
+    self.mode = 1
 
 class Button:
   pass
